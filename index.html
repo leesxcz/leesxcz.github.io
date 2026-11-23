@@ -1,8 +1,61 @@
-<!DOCTYPE html>
-<html>
-<head><title>Lee's Page</title></head>
-<body>
-  <h1>Welcome</h1>
-  <p>This is my homepage.</p>
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f7f8fc">
+  <meta name="description" content="Junfeng Zhou’s personal homepage and computational physics projects, including simulations for plasmon-enabled single-molecule localization microscopy.">
+  <title>Junfeng Zhou · Personal homepage</title>
+  <link rel="canonical" href="https://leesxcz.github.io/">
+  <link rel="icon" type="image/png" href="assets/github-avatar.png">
+  <link rel="preload" href="assets/fonts/instrument-serif-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="assets/site.css">
+</head>
+<body id="top">
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="masthead">
+    <div class="wrap masthead-inner">
+      <a class="wordmark" href="#top" aria-label="Junfeng Zhou, home">Junfeng Zhou</a>
+      <nav aria-label="Main navigation">
+        <a href="#work">My work</a>
+        <a href="https://github.com/leesxcz">GitHub</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="wrap welcome" aria-labelledby="intro-title">
+      <div class="intro">
+        <h1 id="intro-title">Hello, I’m <span>Junfeng Zhou.</span></h1>
+        <p>Welcome to my homepage. I share my computational physics projects here, along with the code and data behind them.</p>
+        <a class="work-link" href="#work">Explore my work</a>
+      </div>
+
+      <a class="portrait-card" href="https://github.com/leesxcz" aria-label="Visit Junfeng Zhou’s GitHub profile, @leesxcz">
+        <div class="portrait-mat">
+          <img class="portrait" src="assets/github-avatar.png" width="256" height="256" alt="Junfeng Zhou’s blue-haired illustrated GitHub avatar">
+        </div>
+        <div class="portrait-caption">
+          <span class="handle">@leesxcz</span>
+          <span>GitHub profile</span>
+        </div>
+      </a>
+    </section>
+
+    <section class="project" id="work" aria-labelledby="project-title">
+      <div class="wrap project-inner">
+        <p class="section-label">Featured work</p>
+        <div class="project-copy">
+          <h2 id="project-title">MDM plasmon simulations</h2>
+          <p>A full-wave 2D model shows how a grating launches a plasmon in a metal–dielectric–metal (MDM) structure. The reduced 3D model calculates how that wave interferes with a reference beam near a corner for single-molecule localization microscopy.</p>
+          <div class="resources" aria-label="MDM project resources" role="group">
+            <a href="https://github.com/leesxcz/mdm-plasmon-simulations">Source code</a>
+            <a href="https://arxiv.org/abs/2606.31758">Read the paper</a>
+            <a href="https://github.com/leesxcz/mdm-plasmon-simulations/releases/tag/v0.1.0">Saved data</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
 </body>
 </html>
