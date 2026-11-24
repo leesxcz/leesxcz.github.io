@@ -1,1 +1,218 @@
-test
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="color-scheme" content="dark"><title>Junfeng Zhou · Computational Physics</title><style>html,body{margin:0;background:#0d1117}#junfeng-profile{min-height:100vh;min-height:100svh}
+
+  #junfeng-profile {
+    --canvas: #0d1117;
+    --inset: rgb(21 27 35 / 86%);
+    --line: #30363d;
+    --text: #e6edf3;
+    --muted: #a1abb6;
+    --link: #79b8ff;
+    container-type: inline-size;
+    color-scheme: dark;
+    color: var(--text);
+    background-color: var(--canvas);
+    /* Map the 560px circle centered at (483, 405) in the 1000px GIF to the viewport. */
+    --wavepacket-pixel: calc(100vmin / 560);
+    --wavepacket-size: calc(1000 * var(--wavepacket-pixel));
+    background-image:
+      radial-gradient(circle at 48.3% 40.5%, rgb(13 17 23 / 72%) calc(50vmin - 1px), var(--canvas) 50vmin),
+      url("assets/wavepacket.gif");
+    background-position: calc(50% + 17 * var(--wavepacket-pixel)) calc(50% + 95 * var(--wavepacket-pixel));
+    background-size: var(--wavepacket-size) var(--wavepacket-size);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    font: 15px/1.5 -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
+    text-align: start;
+  }
+  #junfeng-profile *, #junfeng-profile *::before, #junfeng-profile *::after { box-sizing: border-box; }
+  #junfeng-profile :is(h1, h2, h3, p, dl, dd, ul, figure) { margin: 0; }
+  #junfeng-profile a { color: var(--link); text-decoration: none; }
+  #junfeng-profile a:hover { text-decoration: underline; }
+  #junfeng-profile a:focus-visible { outline: 2px solid var(--link); outline-offset: 3px; }
+  #junfeng-profile .gh-ico { width: 16px; height: 16px; flex: none; }
+  #junfeng-profile i.gh-ico:empty { display: none; }
+
+  #junfeng-profile :is(.gh-nav, .gh-columns) { max-width: 1120px; margin-inline: auto; }
+
+  #junfeng-profile .gh-nav {
+    display: flex; align-items: stretch; flex-wrap: wrap; gap: 18px;
+    padding: 0 22px; border-bottom: 1px solid var(--line); background: var(--inset);
+  }
+  #junfeng-profile .gh-nav a {
+    display: inline-flex; align-items: center; gap: 7px; min-height: 45px;
+    color: var(--text); font-size: 14px;
+  }
+  #junfeng-profile .gh-account { font-weight: 600; margin-right: 5px; }
+  #junfeng-profile .gh-nav-current { border-bottom: 2px solid #f78166; }
+  #junfeng-profile .gh-count {
+    padding: 0 6px; border-radius: 12px; background: #292f37; font-size: 12px;
+  }
+
+  #junfeng-profile .gh-columns {
+    display: grid; grid-template-columns: minmax(150px, 21%) minmax(0, 1fr);
+    align-items: start; gap: 22px; padding: 22px;
+  }
+  #junfeng-profile .gh-avatar {
+    display: block; width: min(100%, 160px); height: auto; aspect-ratio: 1;
+    border: 1px solid var(--line); border-radius: 50%; background: #161b22;
+  }
+  #junfeng-profile .gh-person { margin-top: 12px; }
+  #junfeng-profile .gh-name { font-size: 23px; line-height: 1.22; font-weight: 600; }
+  #junfeng-profile .gh-handle { color: var(--muted); font-size: 17px; }
+  #junfeng-profile .gh-bio { margin-top: 12px; font-size: 14px; }
+  #junfeng-profile .gh-education { margin-top: 8px; font-size: 14px; }
+  #junfeng-profile .gh-education p + p { margin-top: 8px; }
+
+  #junfeng-profile .gh-readme { min-width: 0; border: 1px solid var(--line); border-radius: 6px; background-color: rgb(13 17 23 / 35%); }
+  #junfeng-profile .gh-file {
+    display: flex; align-items: center; gap: 8px; padding: 10px 16px;
+    border-bottom: 1px solid var(--line); color: #c3cad4; font-size: 13px; font-weight: 600;
+  }
+  #junfeng-profile .gh-content { padding: 20px; }
+  #junfeng-profile h1 {
+    padding-bottom: 10px; border-bottom: 1px solid var(--line);
+    font-size: clamp(21px, 2.7cqi, 28px); line-height: 1.24; font-weight: 600; letter-spacing: -.015em;
+  }
+  #junfeng-profile .gh-field { color: var(--link); }
+  #junfeng-profile .gh-section { margin-top: 17px; }
+  #junfeng-profile .gh-section h2 {
+    display: flex; align-items: center; gap: 8px; padding-bottom: 5px;
+    border-bottom: 1px solid var(--line); font-size: 17px; font-weight: 600; line-height: 1.35;
+  }
+  #junfeng-profile .gh-section h2 .gh-ico { color: #a7bad2; }
+  #junfeng-profile .gh-section > p { margin-top: 8px; }
+  #junfeng-profile .gh-stack { display: flex; flex-wrap: wrap; gap: 20px; list-style: none; padding: 0; margin-top: 8px; }
+  #junfeng-profile .gh-stack li, #junfeng-profile .gh-repolink { display: flex; align-items: center; gap: 7px; }
+  #junfeng-profile .gh-stack img, #junfeng-profile .gh-nvidia, #junfeng-profile .gh-mathematica { width: 21px; height: 21px; flex: none; }
+  #junfeng-profile .gh-nvidia {
+    background: #86bd38;
+    -webkit-mask: url("https://cdn.jsdelivr.net/npm/simple-icons@13.21.0/icons/nvidia.svg") center / contain no-repeat;
+    mask: url("https://cdn.jsdelivr.net/npm/simple-icons@13.21.0/icons/nvidia.svg") center / contain no-repeat;
+  }
+  #junfeng-profile .gh-mathematica {
+    background: #dd1100;
+    -webkit-mask: url("https://cdn.jsdelivr.net/npm/simple-icons@13.21.0/icons/wolframmathematica.svg") center / contain no-repeat;
+    mask: url("https://cdn.jsdelivr.net/npm/simple-icons@13.21.0/icons/wolframmathematica.svg") center / contain no-repeat;
+  }
+
+  #junfeng-profile .gh-publications { margin: 8px 0 0; padding-inline-start: 22px; }
+  #junfeng-profile .gh-publications li + li { margin-top: 8px; }
+  #junfeng-profile .gh-publications li::marker { color: var(--muted); }
+  #junfeng-profile .gh-citation { display: block; color: var(--muted); font-size: 13px; }
+
+  #junfeng-profile .gh-repo {
+    min-width: 0; padding: 12px 14px; border: 1px solid var(--line); border-radius: 6px; margin-top: 9px;
+  }
+  #junfeng-profile .gh-repolink { width: fit-content; max-width: 100%; font-weight: 600; overflow-wrap: anywhere; }
+  #junfeng-profile .gh-repolink .gh-ico { color: var(--muted); }
+  #junfeng-profile .gh-repo p { margin: 7px 0; font-size: 14px; }
+  #junfeng-profile .gh-resources { display: flex; flex-wrap: wrap; gap: 4px 18px; }
+  #junfeng-profile .gh-resources a { font-size: 14px; text-decoration: underline; text-underline-offset: 2px; }
+
+  @container (max-width: 650px) {
+    #junfeng-profile .gh-columns { grid-template-columns: 1fr; gap: 15px; padding: 16px; }
+    #junfeng-profile .gh-sidebar { display: grid; grid-template-columns: 74px minmax(0, 1fr); align-items: center; gap: 8px 14px; }
+    #junfeng-profile .gh-education { grid-column: 1 / -1; margin-top: 0; }
+    #junfeng-profile .gh-avatar { width: 74px; }
+    #junfeng-profile .gh-person, #junfeng-profile .gh-bio { margin-top: 0; }
+    #junfeng-profile .gh-name { font-size: 21px; }
+    #junfeng-profile .gh-handle { font-size: 15px; }
+    #junfeng-profile .gh-content { padding: 15px; }
+  }
+  @container (max-width: 460px) {
+    #junfeng-profile .gh-nav { padding-inline: 12px; gap: 12px; }
+    #junfeng-profile .gh-account { margin: 0; }
+    #junfeng-profile .gh-nav a { font-size: 13px; gap: 4px; }
+    #junfeng-profile .gh-columns { padding: 12px; }
+  }
+  @media (pointer: coarse) {
+    #junfeng-profile .gh-resources a, #junfeng-profile .gh-repolink { min-height: 44px; display: inline-flex; align-items: center; }
+  }
+</style></head><body>
+<div id="junfeng-profile">
+  <nav class="gh-nav" aria-label="Profile navigation">
+    <a class="gh-account" href="https://github.com/leesxcz" target="_blank" rel="noopener noreferrer">
+      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="circle-user-round" class="lucide lucide-circle-user-round gh-ico" aria-hidden="true"><path d="M17.925 20.056a6 6 0 0 0-11.851.001"></path><circle cx="12" cy="11" r="4"></circle><circle cx="12" cy="12" r="10"></circle></svg>leesxcz
+    </a>
+    <a class="gh-nav-current" href="#junfeng-readme" aria-current="page">Overview</a>
+    <a href="https://github.com/leesxcz?tab=repositories" target="_blank" rel="noopener noreferrer">Repositories <span class="gh-count">3</span></a>
+  </nav>
+
+  <div class="gh-columns">
+    <aside class="gh-sidebar" aria-label="Profile">
+      <a href="https://github.com/leesxcz" aria-label="Junfeng Zhou on GitHub" target="_blank" rel="noopener noreferrer">
+        <img class="gh-avatar" width="160" height="160" alt="Junfeng Zhou’s GitHub avatar" src="https://cdn.jsdelivr.net/gh/leesxcz/leesxcz.github.io@8606d46236bc21cb48ec3438d107c342a3515520/assets/github-avatar.png">
+      </a>
+      <div class="gh-person">
+        <p class="gh-name">Junfeng Zhou</p>
+        <a class="gh-handle" href="https://github.com/leesxcz" target="_blank" rel="noopener noreferrer">@leesxcz</a>
+        <p class="gh-bio">Computational physics</p>
+      </div>
+      <div class="gh-education">
+        <p>I received my <strong>Ph.D. in Physics</strong> from Texas A&amp;M University in <time datetime="2026-08">August 2026</time>.</p>
+        <p><strong>Thesis topic</strong> · Numerical simulations of intense laser–matter interactions and high-harmonic generation in atomic and molecular systems.</p>
+      </div>
+    </aside>
+
+    <article id="junfeng-readme" class="gh-readme" aria-labelledby="junfeng-greeting">
+      <div class="gh-file"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="book-open" class="lucide lucide-book-open gh-ico" aria-hidden="true"><path d="M12 7v14"></path><path d="M3 18a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h5a4 4 0 0 1 4 4 4 4 0 0 1 4-4h5a1 1 0 0 1 1 1v13a1 1 0 0 1-1 1h-6a3 3 0 0 0-3 3 3 3 0 0 0-3-3z"></path></svg>README.md</div>
+      <div class="gh-content">
+        <h1 id="junfeng-greeting">Hi, I’m Junfeng Zhou <span class="gh-field">— Computational Physics</span></h1>
+
+        <section class="gh-section">
+          <h2><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="user-round" class="lucide lucide-user-round gh-ico" aria-hidden="true"><circle cx="12" cy="8" r="5"></circle><path d="M20 21a8 8 0 0 0-16 0"></path></svg>About Me</h2>
+          <p>I study how atoms and molecules respond to intense laser pulses and build GPU-accelerated solvers for electron dynamics.</p>
+        </section>
+
+        <section class="gh-section">
+          <h2><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="wrench" class="lucide lucide-wrench gh-ico" aria-hidden="true"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.106-3.105c.32-.322.863-.22.983.218a6 6 0 0 1-8.259 7.057l-7.91 7.91a1 1 0 0 1-2.999-3l7.91-7.91a6 6 0 0 1 7.057-8.259c.438.12.54.662.219.984z"></path></svg>Tech Stack</h2>
+          <ul class="gh-stack">
+            <li><img alt="" src="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.17.0/icons/python/python-original.svg">Python</li>
+            <li><span class="gh-nvidia" aria-hidden="true"></span>CUDA</li>
+            <li><img alt="" src="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.17.0/icons/matlab/matlab-original.svg">MATLAB</li>
+            <li><img alt="" src="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.17.0/icons/pytorch/pytorch-original.svg">PyTorch</li>
+            <li><img alt="" src="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.17.0/icons/labview/labview-original.svg">LabVIEW</li>
+            <li><span class="gh-mathematica" aria-hidden="true"></span>Mathematica</li>
+          </ul>
+        </section>
+
+        <section class="gh-section">
+          <h2><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="file-text" class="lucide lucide-file-text gh-ico" aria-hidden="true"><path d="M6 22a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h8a2.4 2.4 0 0 1 1.704.706l3.588 3.588A2.4 2.4 0 0 1 20 8v12a2 2 0 0 1-2 2z"></path><path d="M14 2v5a1 1 0 0 0 1 1h5"></path><path d="M10 9H8"></path><path d="M16 13H8"></path><path d="M16 17H8"></path></svg>Publications</h2>
+          <ol class="gh-publications">
+            <li>
+              <a href="https://doi.org/10.1016/j.ijleo.2026.172706" target="_blank" rel="noopener noreferrer">Dynamic Control of Laser Filamentation with Holographically Generated Airy Beams</a>
+              <span class="gh-citation"><cite>Optik</cite> 348, 172706 (2026)</span>
+            </li>
+            <li>
+              <a href="https://doi.org/10.1088/1361-6455/ac0c29" target="_blank" rel="noopener noreferrer">Energy and angular distributions of electrons from sodium atoms photo-ionized with femtosecond laser pulses</a>
+              <span class="gh-citation"><cite>J. Phys. B: At. Mol. Opt. Phys.</cite> 54(14), 145401 (2021)</span>
+            </li>
+            <li>
+              <a href="https://doi.org/10.1117/1.OE.60.5.055107" target="_blank" rel="noopener noreferrer">Diffractive multifocal lenses by computer-generated holograms</a>
+              <span class="gh-citation"><cite>Optical Engineering</cite> 60(5), 055107 (2021)</span>
+            </li>
+            <li>
+              <a href="https://arxiv.org/abs/2606.31758" target="_blank" rel="noopener noreferrer">Plasmon-Enabled High-Precision Single Molecule Localization Microscopy over an Extended Field of View</a>
+              <span class="gh-citation"><cite>arXiv preprint</cite> · arXiv:2606.31758 (2026)</span>
+            </li>
+          </ol>
+        </section>
+
+        <section class="gh-section">
+          <h2><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="pin" class="lucide lucide-pin gh-ico" aria-hidden="true"><path d="M12 17v5"></path><path d="M9 10.76a2 2 0 0 1-1.11 1.79l-1.78.9A2 2 0 0 0 5 15.24V16a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-.76a2 2 0 0 0-1.11-1.79l-1.78-.9A2 2 0 0 1 15 10.76V7a1 1 0 0 1 1-1 2 2 0 0 0 0-4H8a2 2 0 0 0 0 4 1 1 0 0 1 1 1z"></path></svg>Featured Repository</h2>
+          <div class="gh-repo">
+            <a class="gh-repolink" href="https://github.com/leesxcz/mdm-plasmon-simulations" target="_blank" rel="noopener noreferrer"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="book-marked" class="lucide lucide-book-marked gh-ico" aria-hidden="true"><path d="M10 2v8l3-3 3 3V2"></path><path d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H19a1 1 0 0 1 1 1v18a1 1 0 0 1-1 1H6.5a1 1 0 0 1 0-5H20"></path></svg>mdm-plasmon-simulations</a>
+            <p>The full-wave 2D model calculates how a grating launches a plasmon in a metal–dielectric–metal structure. The reduced 3D model predicts its interference with a reference beam near a corner for single-molecule localization microscopy.</p>
+            <div class="gh-resources">
+              <a href="https://arxiv.org/abs/2606.31758" target="_blank" rel="noopener noreferrer">Paper</a>
+              <a href="https://github.com/leesxcz/mdm-plasmon-simulations" target="_blank" rel="noopener noreferrer">Code</a>
+              <a href="https://github.com/leesxcz/mdm-plasmon-simulations/releases/tag/v0.1.0" target="_blank" rel="noopener noreferrer">Data</a>
+            </div>
+          </div>
+        </section>
+      </div>
+    </article>
+  </div>
+</div>
+</body></html>
